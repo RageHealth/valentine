@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.cute {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  font-size: 18px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yes {
+  background: #4CAF50;
+  color: white;
+}
+
+#no {
+  background: #f44336;
+  color: white;
+}
+
+
+
+@media (max-width: 600px) {
+
+  .container {
+    width: 90%;
+  }
+
+  .cute {
+    width: 110px;
+  }
+  .cut {
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .buttons {
+    flex-direction: row;      /* ← слева и справа */
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  button {
+    width: 48%;               /* ← чтобы влезали рядом */
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
+
+.heart {
+  position: fixed;
+  top: -20px;
+  font-size: 24px;
+  animation: fall linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
+
+.love-text {
+  position: fixed;
+  bottom: 20px;
+  font-size: 20px;
+  animation: flyUp 3s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes flyUp {
+  to {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+}
+
+
+.cut {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
