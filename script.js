@@ -11,14 +11,14 @@ noBtn.addEventListener("click", () => {
 
   if (noScale <= 0.2) {
     noBtn.style.display = "none";
-    text.innerText = "У тебя нету выбора 😏";
+    text.innerText = "У ТЕБЯ НЕТУ ВЫБОРА 😏";
     return;
   }
 
   noBtn.style.transform = `scale(${noScale})`;
   yesBtn.style.transform = `scale(${yesScale})`;
 
-  text.innerText = "Уверенна 🥺?";
+  text.innerText = "УВЕРЕННА 🥺?";
 });
 
 yesBtn.addEventListener("click", () => {
@@ -65,4 +65,5 @@ function flyingLoveText() {
 
   setTimeout(() => el.remove(), 3000);
 }
+
 
