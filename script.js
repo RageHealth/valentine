@@ -11,14 +11,14 @@ noBtn.addEventListener("click", () => {
 
   if (noScale <= 0.2) {
     noBtn.style.display = "none";
-    text.innerText = "У ТЕБЯ НЕТУ ВЫБОРА 😏";
+    text.innerText = "NIE MASZ WYBORU 😏";
     return;
   }
 
   noBtn.style.transform = `scale(${noScale})`;
   yesBtn.style.transform = `scale(${yesScale})`;
 
-  text.innerText = "УВЕРЕННА 🥺?";
+  text.innerText = "JESTEŚ PEWNA 🥺?";
 });
 
 yesBtn.addEventListener("click", () => {
@@ -54,7 +54,7 @@ function createHeart() {
 }
 
 function flyingLoveText() {
-  const texts = ["I love you 💕", "Люблю тебя 💖", "💋💋💋"];
+  const texts = ["I love you 💕", "Kocham cię 💖", "💋💋💋"];
   const el = document.createElement("div");
   el.className = "love-text";
   el.innerText = texts[Math.floor(Math.random() * texts.length)];
